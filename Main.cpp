@@ -13,6 +13,6 @@ int main()
           x[i] = in[i];
           cout << x[i] << endl;
      }
-     // The code above converts the input string into a char array. This makes it easier to find the place value of each of the characters.
+     
      return 0;
 }
