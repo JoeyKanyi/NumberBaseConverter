@@ -12,21 +12,7 @@ int main()
           cout << "Enter Binary Number : ";
           cin >> in;
           int n = in.size();
-          for (int i = 0; i < n; i++)
-          {
-               try
-               {
-                    if (in[i] != '1' || in[i] != '0')
-                    {
-                         throw(in);
-                    }
-               }
-               catch (string a)
-               {
-                    cout << a << " Is not a valid binary number." << endl;
-                    break;
-               }
-          }
+
           char x[n];
           for (int i = 0; i < n; i++)
           {
