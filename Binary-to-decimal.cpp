@@ -3,22 +3,35 @@
 #include <unistd.h>
 using namespace std;
 
+/*
+     Does not include decimal conversion functions
+*/
 int main()
 {
+     cout << "Only supports binary conversion without decimal(10^-) conversion functions" << endl;
      while (true)
      {
+          // Initialize the variables
           string in;
           int out = 0;
+          int b = 0;
+          char Q;
+
+          // Inputs the number for a conversion as a string
           cout << "Enter Binary Number : ";
           cin >> in;
-          int n = in.size();
 
+          // Create a char array of the same size as the input string
+          int n = in.size();
           char x[n];
+
+          // Converts the input string to a char array
           for (int i = 0; i < n; i++)
           {
                x[i] = in[i];
           }
-          int b = 0;
+
+          // Does the actual conversion from a binary number to the array
           for (int i = n - 1; i >= 0; i--)
           {
 
@@ -33,8 +46,11 @@ int main()
                }
                b++;
           }
+
+          // Gives the output
           cout << "Decimal Equivalent: " << out << endl;
-          char Q;
+
+          // Queries the user whether to close the program
           cout << "Do you want to continue? (y/n): " << endl;
           cin >> Q;
           if (Q == 'y' || Q == 'Y')
@@ -43,7 +59,7 @@ int main()
           }
           else if (Q == 'n' || Q == 'N')
           {
-               cout << "Thank you" << endl;
+               cout << "Thank you. Goodbye" << endl;
                break;
           }
      }
